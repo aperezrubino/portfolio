@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-59b6a78a-577c-412c-bb1f-60eca4c2ca49" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 165.02 163.49">
+  <defs>
+    <style>
+      .uuid-476620fd-4863-494c-b2e0-f368af6fced3 {
+        clip-path: url(#uuid-f85cf18e-8c44-4e79-b6a1-14c89da080e6);
+      }
+
+      .uuid-a6f98d4f-fd20-4216-84c7-fcf57d17e1d9 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 1.36px;
+      }
+
+      .uuid-a6f98d4f-fd20-4216-84c7-fcf57d17e1d9, .uuid-5f3dee5a-fb69-414b-a01f-3f05b70e3ae4 {
+        fill: none;
+      }
+
+      .uuid-054ef3bb-69ef-4069-8124-b8b90ab2dc68 {
+        fill: #2e4866;
+      }
+    </style>
+    <clipPath id="uuid-f85cf18e-8c44-4e79-b6a1-14c89da080e6">
+      <rect class="uuid-5f3dee5a-fb69-414b-a01f-3f05b70e3ae4" x="33.27" y="40.93" width="131.74" height="122.55"/>
+    </clipPath>
+  </defs>
+  <g id="uuid-667f0283-f6ea-44b1-9bd7-131b568f5a8b" data-name="Capa 1">
+    <g class="uuid-476620fd-4863-494c-b2e0-f368af6fced3">
+      <g>
+        <circle class="uuid-054ef3bb-69ef-4069-8124-b8b90ab2dc68" cx="81.74" cy="81.74" r="81.74"/>
+        <path class="uuid-a6f98d4f-fd20-4216-84c7-fcf57d17e1d9" d="m70.59,116.71s-11.09-8.16-13.7-.82c-2.61,7.34,32.96,15.99,59.88,8.32s-.16-15.45-1.14-15.96-2.77-4.1,5.55-6.39c8.32-2.28,12.24-15.83,5.22-17.78s-11.26,7.5-15.5,20.88c-4.24,13.38-30.67,17.62-39.81,1.47s-4.57-30.02-4.57-30.02c0,0,1.35-1.93,9.42-2.84s37.44-1.65,41.48,3.49-22.09,9.18-44.42,4.28"/>
+      </g>
+    </g>
+  </g>
+</svg>

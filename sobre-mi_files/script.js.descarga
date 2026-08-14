@@ -1,0 +1,194 @@
+
+
+const button = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.main-nav');
+
+button.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  button.setAttribute('aria-expanded', String(isOpen));
+});
+
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    button.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const path = document.querySelector("#firulete");
+  const firu = document.querySelector(".firu");
+  const proyectos = document.querySelector("#proyectos");
+
+  if (!path || !firu || !proyectos) return;
+
+  const largo = path.getTotalLength();
+
+  path.style.strokeDasharray = `${largo}`;
+  path.style.strokeDashoffset = `${largo}`;
+
+  function animarFirulete() {
+    const inicio =
+  firu.getBoundingClientRect().top +
+  window.scrollY -
+  window.innerHeight * 0.7;
+
+    const finalProyectos =
+      proyectos.getBoundingClientRect().bottom +
+      window.scrollY;
+
+    /*
+      Termina cuando la parte inferior de proyectos
+      llega a la parte inferior de la pantalla.
+    */
+    const final = finalProyectos - window.innerHeight;
+
+    let progreso =
+      (window.scrollY - inicio) /
+      (final - inicio);
+
+    progreso = Math.max(0, Math.min(1, progreso));
+
+    path.style.strokeDashoffset =
+      largo * (1 - progreso);
+  }
+
+  window.addEventListener("scroll", animarFirulete, {
+    passive: true
+  });
+
+  window.addEventListener("resize", animarFirulete);
+
+  animarFirulete();
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector(".hero");
+  const video = document.querySelector("#heroVideo");
+
+  if (!hero || !video) return;
+
+  let duracion = 0;
+  let framePendiente = false;
+
+  function prepararVideo() {
+    if (!Number.isFinite(video.duration) || video.duration <= 0) return;
+
+    duracion = video.duration;
+    video.pause();
+    actualizarVideo();
+  }
+
+  function actualizarVideo() {
+    framePendiente = false;
+    if (!duracion) return;
+
+    const rect = hero.getBoundingClientRect();
+    const recorrido = Math.max(1, hero.offsetHeight - window.innerHeight);
+
+    let progreso = -rect.top / recorrido;
+    progreso = Math.max(0, Math.min(1, progreso));
+
+    // Evita buscar exactamente el último frame, que algunos navegadores dejan negro.
+    const nuevoTiempo = progreso * Math.max(0, duracion - 0.05);
+
+    /*
+      Solo actualiza si la diferencia es suficiente.
+      Evita pedir cambios mínimos todo el tiempo.
+    */
+    if (Math.abs(video.currentTime - nuevoTiempo) > 0.03) {
+      video.currentTime = nuevoTiempo;
+    }
+
+  }
+
+  function alHacerScroll() {
+    if (!framePendiente) {
+      requestAnimationFrame(actualizarVideo);
+      framePendiente = true;
+    }
+  }
+
+  window.addEventListener("scroll", alHacerScroll, {
+    passive: true
+  });
+
+  window.addEventListener("resize", actualizarVideo);
+
+  video.addEventListener("loadedmetadata", prepararVideo);
+  video.addEventListener("durationchange", prepararVideo);
+
+  // El metadata puede haberse cargado antes de registrar los listeners.
+  if (video.readyState >= 1) {
+    prepararVideo();
+  } else {
+    video.load();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.querySelector(".service-grid");
+  const cards = document.querySelectorAll(".service-card");
+
+  if (!grid || !cards.length) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  grid.classList.add("reveal-ready");
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    cards.forEach(card => card.classList.add("is-visible"));
+    return;
+  }
+
+  cards.forEach((card, index) => {
+    card.style.setProperty("--reveal-delay", `${index * 140}ms`);
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.2,
+    rootMargin: "0px 0px -8% 0px"
+  });
+
+  cards.forEach(card => observer.observe(card));
+});
+
+const card=document.querySelector(".video-card");
+const video=document.querySelector("#manifestoVideo");
+if(card&&video){
+  card.addEventListener("click",()=>{
+    if(video.paused){video.play();card.classList.add("playing")}
+    else{video.pause();card.classList.remove("playing")}
+  });
+  video.addEventListener("ended",()=>card.classList.remove("playing"));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollHint = document.querySelector("#scrollHint");
+  if (!scrollHint) return;
+
+  let framePending = false;
+
+  function updateScrollHint() {
+    const isAtTop = window.scrollY <= 8;
+    scrollHint.classList.toggle("is-hidden", !isAtTop);
+    scrollHint.setAttribute("aria-hidden", String(!isAtTop));
+    framePending = false;
+  }
+
+  function handleScrollHint() {
+    if (framePending) return;
+    framePending = true;
+    requestAnimationFrame(updateScrollHint);
+  }
+
+  window.addEventListener("scroll", handleScrollHint, { passive: true });
+  updateScrollHint();
+});

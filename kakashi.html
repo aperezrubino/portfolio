@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Kakashi | Agustín Pérez Rubino</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./kakashi_files/proyectos-detalle.css"></head>
+<body class="project-detail layout-single has-demo">
+
+  <!-- NAV -->
+   <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Agustín Pérez Rubino, inicio">APR</a>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="proyectos.html">Proyectos</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a class="nav-cta" href="contacto.html">Escribime</a>
+    </nav>
+  </header>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="pattern" aria-hidden="true">
+      <img src="./kakashi_files/pattern@2x.webp" alt="">
+    </div>
+    <div class="hero-inner">
+      <a href="proyectos.html" class="back-link">← volver a proyectos</a>
+      <span class="eyebrow">proyecto — diseño multimedial</span>
+      <h1>Kakashi</h1>
+      <p class="subtitle">Modelado de Kakashi, uno de los personajes del anime Naruto.</p>
+      <div class="meta-row">
+        <div class="meta-pill"><span>Tipo · <span class="numtel">3</span>D</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVER MEDIA -->
+  <div class="cover-wrap">
+    <!-- Para reemplazarla, cambiá únicamente el src por la imagen final. -->
+    <div class="project-media cover">
+      <img src="./kakashi_files/banner kakashi.webp" alt="" width="1200" height="750">
+    </div>
+  </div>
+
+  <!-- SOBRE EL PROYECTO -->
+  <section class="section">
+    <div class="about-wrap">
+      <span class="eyebrow">sobre el proyecto</span>
+      <p>Este proyecto consiste en la recreación de Kakashi, uno de los personajes de Naruto, con el objetivo de recrear fielmente su diseño para su posterior rigging y animación. La propuesta se centró en simplificar y adaptar las formas del personaje al entorno tridimensional, respetando su estética original y logrando una base limpia y funcional que permita darle vida mediante animación.</p>
+    </div>
+  </section>
+
+  <!-- CTA SIGUIENTE PROYECTO -->
+  <section class="cta">
+    <div class="cta-shape"></div>
+    <div class="cta-text">
+      <span class="eyebrow">seguí explorando</span>
+      <h2>Mirá más<br>proyectos</h2>
+      <a href="proyectos.html" class="btn-pill">Todos los proyectos</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <a class="logo logo-footer" href="index.html">Agustín Pérez Rubino</a>
+      <p>UX/UI · Diseño Web · Branding</p>
+    </div>
+
+    <div>
+      <h3>Navegá</h3>
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+
+    <div>
+      <h3>Seguime</h3>
+      <a href="https://www.linkedin.com/in/aperezrubino/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+      <a href="https://www.behance.net/agustinperezr" target="_blank" rel="noopener noreferrer">Behance</a>
+    </div>
+
+    <div>
+      <h3>Escribime</h3>
+      <a href="mailto:aperezrubino@gmail.com">aperezrubino@gmail.com</a>
+      <a href="tel:+541150635792" class="numtel">11 5063 5792</a>
+    </div>
+    <span class="footer-scribble" aria-hidden="true"></span>
+  </footer>
+
+
+
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body></html>
