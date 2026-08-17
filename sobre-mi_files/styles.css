@@ -1,7 +1,7 @@
 @font-face{
   font-family:'Cocogoose Pro';
   src:url('fonts/Cocogoose-trial.otf') format('opentype');
-  font-weight:100 900;
+  font-weight:400;
   font-style:normal;
   font-display:swap;
 }
@@ -34,6 +34,7 @@ body{
   font-family:'Cocogoose Pro',sans-serif;
   color:var(--ink);
   background:var(--paper);
+  font-synthesis:none;
 }
 
 a{color:inherit;text-decoration:none}
