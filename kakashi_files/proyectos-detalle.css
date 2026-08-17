@@ -114,7 +114,7 @@ p{line-height:1.6;margin:0;}
   margin-bottom:14px;
   display:block;
 }
-.hero h1{font-size:64px;line-height:1.02;font-weight:700;}
+.hero h1{font-size:64px;line-height:1.2;font-weight:700;}
 .hero .subtitle{margin-top:22px;font-size:19px;max-width:560px;color:var(--ink);}
 .meta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;}
 .meta-pill{

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Agencia WonderStudio | Agustín Pérez Rubino</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./wonderstudio_files/proyectos-detalle.css">
+</head>
+<body class="project-detail layout-muvia-grid">
+
+  <!-- NAV -->
+   <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Agustín Pérez Rubino, inicio">APR</a>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="proyectos.html">Proyectos</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a class="nav-cta" href="contacto.html">Escribime</a>
+    </nav>
+  </header>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="pattern" aria-hidden="true">
+      <img src="./wonderstudio_files/pattern@2x.webp" alt="">
+    </div>
+    <div class="hero-inner">
+      <a href="proyectos.html" class="back-link">← volver a proyectos</a>
+      <span class="eyebrow">proyecto — diseño multimedial</span>
+      <h1>Agencia WonderStudio</h1>
+      <p class="subtitle">Diseños y plantillas para la agencia Wonder Studio.</p>
+      <div class="meta-row">
+        <div class="meta-pill"><span>Tipo · </span>Diseño Gráfico</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVER MEDIA -->
+  <div class="cover-wrap">
+    <!-- Para reemplazarla, cambiá únicamente el src por la imagen final. -->
+    <div class="project-media cover">
+      <img src="./wonderstudio_files/banner wonderstudio.webp" alt="Contenido diseñado para Make Arg" width="1600" height="1063">
+    </div>
+  </div>
+
+  <!-- SOBRE EL PROYECTO -->
+  <section class="section">
+    <div class="about-wrap">
+      <span class="eyebrow">sobre el proyecto</span>
+      <p>Este proyecto reúne parte del trabajo de contenido gráfico que realicé en Wonderstudio, donde gestioné en paralelo la comunicación visual de varias marcas —entre ellas Club de Indumentaria, MyTick Curvy y Make Arg— con un ritmo sostenido de cerca de 90 piezas semanales por marca. El trabajo incluyó posts, historias y banners para redes sociales, moodboards de telas y estampados, y plantillas reutilizables pensadas para mantener ese ritmo de publicación sin perder calidad. Cada cliente conservó su propia identidad visual: tipografías, paletas y composición adaptadas a su rubro, desde indumentaria urbana hasta moda curvy y calzado de diseño.</p>
+    </div>
+  </section>
+
+  <!-- GALERÍA RESULTADO -->
+  <section class="section alt">
+    <div class="gallery-head">
+      <span class="eyebrow">el resultado</span>
+      <h2>Así quedó terminado.</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="g1">
+        <div class="project-media">
+          <img src="./wonderstudio_files/make-arg-story.webp" alt="Historia de Instagram para Make Arg" loading="lazy" width="900" height="1600">
+        </div>
+      </div>
+      <div class="g2">
+        <div class="project-media">
+          <img src="./wonderstudio_files/mytick-grid.webp" alt="Grilla de posts para MyTick Curvy" loading="lazy" width="900" height="732">
+        </div>
+      </div>
+      <div class="g3">
+        <div class="project-media">
+          <img src="./wonderstudio_files/moodboard-telas.webp" alt="Moodboard de telas y estampados" loading="lazy" width="900" height="749">
+        </div>
+      </div>
+      <div class="g4">
+        <div class="project-media">
+          <img src="./wonderstudio_files/club-indumentaria-banner.webp" alt="Banner para Club de Indumentaria" loading="lazy" width="1200" height="393">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SIGUIENTE PROYECTO -->
+  <section class="cta">
+    <div class="cta-shape"></div>
+    <div class="cta-text">
+      <span class="eyebrow">seguí explorando</span>
+      <h2>Mirá más<br>proyectos</h2>
+      <a href="proyectos.html" class="btn-pill">Todos los proyectos</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <a class="logo logo-footer" href="index.html">Agustín Pérez Rubino</a>
+      <p>UX/UI · Diseño Web · Branding</p>
+    </div>
+
+    <div>
+      <h3>Navegá</h3>
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+
+    <div>
+      <h3>Seguime</h3>
+      <a href="https://www.linkedin.com/in/aperezrubino/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+      <a href="https://www.behance.net/agustinperezr" target="_blank" rel="noopener noreferrer">Behance</a>
+    </div>
+
+    <div>
+      <h3>Escribime</h3>
+      <a href="mailto:aperezrubino@gmail.com">aperezrubino@gmail.com</a>
+      <a href="tel:+541150635792" class="numtel">11 5063 5792</a>
+    </div>
+    <span class="footer-scribble" aria-hidden="true"></span>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body></html>

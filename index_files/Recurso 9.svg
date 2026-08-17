@@ -9,15 +9,21 @@
       .uuid-a6f98d4f-fd20-4216-84c7-fcf57d17e1d9 {
         stroke: #fff;
         stroke-miterlimit: 10;
-        stroke-width: 1.36px;
+        stroke-width: 2.4px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
       }
 
       .uuid-a6f98d4f-fd20-4216-84c7-fcf57d17e1d9, .uuid-5f3dee5a-fb69-414b-a01f-3f05b70e3ae4 {
         fill: none;
       }
 
+      .uuid-dot {
+        fill: #fff;
+      }
+
       .uuid-054ef3bb-69ef-4069-8124-b8b90ab2dc68 {
-        fill: #2e4866;
+        fill: #3f4a30;
       }
     </style>
     <clipPath id="uuid-f85cf18e-8c44-4e79-b6a1-14c89da080e6">
@@ -28,7 +34,13 @@
     <g class="uuid-476620fd-4863-494c-b2e0-f368af6fced3">
       <g>
         <circle class="uuid-054ef3bb-69ef-4069-8124-b8b90ab2dc68" cx="81.74" cy="81.74" r="81.74"/>
-        <path class="uuid-a6f98d4f-fd20-4216-84c7-fcf57d17e1d9" d="m70.59,116.71s-11.09-8.16-13.7-.82c-2.61,7.34,32.96,15.99,59.88,8.32s-.16-15.45-1.14-15.96-2.77-4.1,5.55-6.39c8.32-2.28,12.24-15.83,5.22-17.78s-11.26,7.5-15.5,20.88c-4.24,13.38-30.67,17.62-39.81,1.47s-4.57-30.02-4.57-30.02c0,0,1.35-1.93,9.42-2.84s37.44-1.65,41.48,3.49-22.09,9.18-44.42,4.28"/>
+        <rect class="uuid-a6f98d4f-fd20-4216-84c7-fcf57d17e1d9" x="58" y="67" width="66" height="51" rx="5"/>
+        <line class="uuid-a6f98d4f-fd20-4216-84c7-fcf57d17e1d9" x1="58" y1="81" x2="124" y2="81"/>
+        <circle class="uuid-dot" cx="66" cy="74" r="2.2"/>
+        <circle class="uuid-dot" cx="74.5" cy="74" r="2.2"/>
+        <line class="uuid-a6f98d4f-fd20-4216-84c7-fcf57d17e1d9" x1="67" y1="93" x2="101" y2="93"/>
+        <line class="uuid-a6f98d4f-fd20-4216-84c7-fcf57d17e1d9" x1="67" y1="102" x2="115" y2="102"/>
+        <line class="uuid-a6f98d4f-fd20-4216-84c7-fcf57d17e1d9" x1="67" y1="111" x2="91" y2="111"/>
       </g>
     </g>
   </g>

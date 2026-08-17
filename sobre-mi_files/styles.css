@@ -84,7 +84,7 @@ img{display:block;width:100%}
   overflow:hidden;
 }
 .home-hero-inner{position:relative;z-index:2;max-width:560px}
-.home-hero h1{font-size:clamp(2.4rem,4.6vw,4rem);line-height:1.05;margin:14px 0 20px}
+.home-hero h1{font-size:clamp(2.4rem,4.6vw,4rem);line-height:1.2;margin:14px 0 20px}
 .home-hero h1 em{font-style:normal;color:var(--orange)}
 .home-hero p{font-size:1.05rem;line-height:1.6;color:#4c4c4c;margin-bottom:28px;max-width:480px}
 .home-hero-portrait{position:relative;justify-self:center;width:min(100%,360px);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 24px 50px -20px rgba(63,74,48,.35)}
@@ -269,12 +269,12 @@ img{display:block;width:100%}
 
 .svg-path {
   position: absolute;
-  top: 0;
+  top: -140px;
   left: 50%;
   transform: translateX(-50%);
 
   width: 100%;
-  height: 100%;
+  height: calc(100% + 400px);
 
   z-index: -1;
   pointer-events: none;
@@ -297,7 +297,7 @@ img{display:block;width:100%}
   height:190px;
 }
 .sobrenos-copy{position:relative;z-index:2}
-.sobrenos h1{font:600 clamp(3.6rem,3.5vw,6.8rem)/.95 "Cocogoose Pro",sans-serif;letter-spacing:-.05em;margin:82px 0 8px}
+.sobrenos h1{font:600 clamp(3.6rem,3.5vw,6.8rem)/1.15 "Cocogoose Pro",sans-serif;letter-spacing:-.05em;margin:82px 0 8px}
 .sobrenos h2{color:var(--orange);margin:0 0 28px;font-size:clamp(1.4rem,2vw,2rem)}
 .sobrenos p,.section p{color:var(--navy);line-height:1.25}
 .pattern{
@@ -315,7 +315,7 @@ img{display:block;width:100%}
 .exp-body p:last-child{font-size:.92rem;line-height:1.6;color:#4c4c4c}
 @media (max-width:600px){.exp-item{grid-template-columns:1fr}}
 .eyebrow{text-transform:uppercase;color:var(--orange)!important;font-weight:700;font-size:1rem;margin:0 0 22px}
-.section h2{font:600 clamp(2rem,2vw,4rem)/.95 "Cocogoose Pro",sans-serif;letter-spacing:-.04em;margin:0 0 28px}
+.section h2{font:600 clamp(2rem,2vw,4rem)/1.15 "Cocogoose Pro",sans-serif;letter-spacing:-.04em;margin:0 0 28px}
 .portrait-frame{width:100%;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:#747474}
 .portrait-frame img{width:100%;height:100%;object-fit:cover;display:block}
 .edu-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px}
