@@ -335,6 +335,17 @@
           <span class="card-cat">grafico</span>
         </div>
       </a>
+
+      <a class="card" href="lounge.html" data-cat="motion audiovisual">
+        <div class="card-media">
+          <img src="./proyectos_files/previsual lounge.webp" alt="Vista previa de Motion para Agencia propia Lounge" loading="lazy" width="1600" height="900">
+          <div class="card-overlay"><span class="view-tag">ver proyecto →</span></div>
+        </div>
+        <div class="card-info">
+          <h3>Motion para Agencia propia Lounge</h3>
+          <span class="card-cat">motion audiovisual</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -406,6 +417,7 @@
       { titulo: "Desarrollo de app grúas", categoria: "uxui", imagen: assets + "previsual gruas.webp", href: "gruas.html" },
       { titulo: "Modelado 3D Donut", categoria: "3d", imagen: assets + "previsual donut.webp", href: "donut.html" },
       { titulo: "Publicidad diseñada en base a McDonald's", categoria: "grafico", imagen: assets + "previsual mcdonalds.webp", href: "mcdonalds.html" },
+      { titulo: "Motion para Agencia propia Lounge", categoria: "motion audiovisual", imagen: assets + "previsual lounge.webp", href: "lounge.html" },
     ];
 
     const grid = document.getElementById('projectsGrid');
@@ -443,7 +455,8 @@
         btn.classList.add('active');
         const filter = btn.dataset.filter;
         document.querySelectorAll('.card').forEach(card => {
-          const show = filter === 'todos' || card.dataset.cat === filter;
+          const cats = card.dataset.cat.split(' ');
+          const show = filter === 'todos' || cats.includes(filter);
           card.classList.toggle('hidden', !show);
         });
       });
