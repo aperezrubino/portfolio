@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Publicidad diseñada en base a McDonald's | Agustín Pérez Rubino</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./mcdonalds_files/proyectos-detalle.css">
+<link rel="stylesheet" href="./mcdonalds_files/juxtapose.css">
+</head>
+<body class="project-detail layout-single">
+
+  <!-- NAV -->
+   <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Agustín Pérez Rubino, inicio">APR</a>
+
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="proyectos.html">Proyectos</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a class="nav-cta" href="contacto.html">Escribime</a>
+    </nav>
+  </header>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="pattern" aria-hidden="true">
+      <img src="./mcdonalds_files/pattern@2x.webp" alt="">
+    </div>
+    <div class="hero-inner">
+      <a href="proyectos.html" class="back-link">← volver a proyectos</a>
+      <span class="eyebrow">proyecto — diseño multimedial</span>
+      <h1>Publicidad diseñada en base a McDonald's</h1>
+      <p class="subtitle">Fotomontaje publicitario, comparado en vivo con la foto original.</p>
+      <div class="meta-row">
+        <div class="meta-pill"><span>Tipo · </span>Diseño Gráfico</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVER MEDIA -->
+  <div class="cover-wrap">
+    <!-- Para reemplazarla, cambiá únicamente el src por la imagen final. -->
+    <div class="project-media cover">
+      <img src="./mcdonalds_files/entrega-mcdonalds.webp" alt="Fotomontaje publicitario de McDonald's, una caja de papas fritas gigante reemplazando una casa" width="1600" height="889">
+    </div>
+  </div>
+
+  <!-- SOBRE EL PROYECTO -->
+  <section class="section">
+    <div class="about-wrap">
+      <span class="eyebrow">sobre el proyecto</span>
+      <p>Pieza publicitaria realizada a partir de una fotografía real de una calle residencial, donde reemplacé una de las casas por una caja de papas fritas gigante de McDonald's, coronada por un ramo de globos rojos y amarillos con los colores de la marca. Trabajé el fotomontaje cuidando la perspectiva y la escala para que la intervención se sienta integrada en la escena original, sumando el eslogan "i'm lovin' it" y chicos corriendo hacia la puerta para reforzar la idea de antojo y deseo que buscan este tipo de campañas.</p>
+    </div>
+  </section>
+
+  <!-- GALERÍA RESULTADO -->
+  <section class="section alt">
+    <div class="gallery-head">
+      <span class="eyebrow">el resultado</span>
+      <h2>Deslizá para comparar el antes y el después.</h2>
+    </div>
+    <div class="juxtapose-wrap">
+      <div id="juxtapose-mcdonalds"></div>
+    </div>
+  </section>
+
+  <!-- CTA SIGUIENTE PROYECTO -->
+  <section class="cta">
+    <div class="cta-shape"></div>
+    <div class="cta-text">
+      <span class="eyebrow">seguí explorando</span>
+      <h2>Mirá más<br>proyectos</h2>
+      <a href="proyectos.html" class="btn-pill">Todos los proyectos</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <a class="logo logo-footer" href="index.html">Agustín Pérez Rubino</a>
+      <p>UX/UI · Diseño Web · Branding</p>
+    </div>
+
+    <div>
+      <h3>Navegá</h3>
+      <a href="index.html">Inicio</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+
+    <div>
+      <h3>Seguime</h3>
+      <a href="https://www.linkedin.com/in/aperezrubino/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+      <a href="https://www.behance.net/agustinperezr" target="_blank" rel="noopener noreferrer">Behance</a>
+    </div>
+
+    <div>
+      <h3>Escribime</h3>
+      <a href="mailto:aperezrubino@gmail.com">aperezrubino@gmail.com</a>
+      <a href="tel:+541150635792" class="numtel">11 5063 5792</a>
+    </div>
+    <span class="footer-scribble" aria-hidden="true"></span>
+  </footer>
+
+  <style>
+    .juxtapose-wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+    .juxtapose-wrap #juxtapose-mcdonalds{width:100%;}
+  </style>
+
+  <script src="./mcdonalds_files/juxtapose.js"></script>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    window.addEventListener('load', function() {
+      new juxtapose.JXSlider('#juxtapose-mcdonalds',
+        [
+          { src: './mcdonalds_files/norwood-ohio.webp', label: 'Antes' },
+          { src: './mcdonalds_files/entrega-mcdonalds.webp', label: 'Después' }
+        ],
+        {
+          animate: true,
+          showLabels: true,
+          showCredits: false,
+          startingPosition: '50%',
+          makeResponsive: true
+        });
+      window.dispatchEvent(new Event('resize'));
+    });
+  </script>
+
+</body></html>
