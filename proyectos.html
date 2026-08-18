@@ -50,6 +50,17 @@
   <!-- GRID --> 
   <section class="grid-section">
     <div class="projects-grid digital" id="projectsGrid">
+      <a class="card" href="lounge.html" data-cat="motion audiovisual">
+        <div class="card-media">
+          <img src="./proyectos_files/previsual lounge.webp" alt="Vista previa de Motion para Agencia propia Lounge" loading="lazy" width="1600" height="900">
+          <div class="card-overlay"><span class="view-tag">ver proyecto →</span></div>
+        </div>
+        <div class="card-info">
+          <h3>Motion para Agencia propia Lounge</h3>
+          <span class="card-cat">motion audiovisual</span>
+        </div>
+      </a>
+
       <a class="card" href="kakashi.html" data-cat="3d">
         <div class="card-media">
           <img src="./proyectos_files/previsual kakashi.webp" alt="Vista previa de Kakashi (Naruto)" loading="lazy" width="1200" height="750">
@@ -335,17 +346,6 @@
           <span class="card-cat">grafico</span>
         </div>
       </a>
-
-      <a class="card" href="lounge.html" data-cat="motion audiovisual">
-        <div class="card-media">
-          <img src="./proyectos_files/previsual lounge.webp" alt="Vista previa de Motion para Agencia propia Lounge" loading="lazy" width="1600" height="900">
-          <div class="card-overlay"><span class="view-tag">ver proyecto →</span></div>
-        </div>
-        <div class="card-info">
-          <h3>Motion para Agencia propia Lounge</h3>
-          <span class="card-cat">motion audiovisual</span>
-        </div>
-      </a>
     </div>
   </section>
 
@@ -391,6 +391,7 @@
     // "categoria" se usa para que funcionen los filtros de arriba.
     const assets = "./proyectos_files/";
     const proyectos = [
+      { titulo: "Motion para Agencia propia Lounge", categoria: "motion audiovisual", imagen: assets + "previsual lounge.webp", href: "lounge.html" },
       { titulo: "Kakashi", categoria: "3d", imagen: assets + "previsual kakashi.webp", href: "kakashi.html" },
       { titulo: "Promised Neverland", categoria: "grafico", imagen: assets + "previsual_0005_promised.webp", href: "promisedneverland.html" },
       { titulo: "Expertise Consultores", categoria: "Web", imagen: assets + "previsual_0004_consultores.webp", href: "consultores.html" },
@@ -417,7 +418,6 @@
       { titulo: "Desarrollo de app grúas", categoria: "uxui", imagen: assets + "previsual gruas.webp", href: "gruas.html" },
       { titulo: "Modelado 3D Donut", categoria: "3d", imagen: assets + "previsual donut.webp", href: "donut.html" },
       { titulo: "Publicidad diseñada en base a McDonald's", categoria: "grafico", imagen: assets + "previsual mcdonalds.webp", href: "mcdonalds.html" },
-      { titulo: "Motion para Agencia propia Lounge", categoria: "motion audiovisual", imagen: assets + "previsual lounge.webp", href: "lounge.html" },
     ];
 
     const grid = document.getElementById('projectsGrid');
