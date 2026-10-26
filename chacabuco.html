@@ -5,10 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="./chacabuco_files/proyectos-detalle.css">
   <style>
-    .layout-two-equal .gallery-grid{grid-template-rows:auto;grid-auto-rows:auto;align-items:center;}
-    .layout-two-equal .gallery-grid > div,
+    .layout-two-equal .gallery-grid{grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:auto;grid-auto-rows:auto;align-items:center;}
+    .layout-two-equal .gallery-grid > div{height:auto;}
     .layout-two-equal .gallery-grid .project-media{height:auto;}
     .layout-two-equal .gallery-grid .project-media img{height:auto;object-fit:contain;}
+    .layout-two-equal .gallery-grid .project-media a{display:block;}
+    .layout-two-equal .gallery-grid .g1,.layout-two-equal .gallery-grid .g4{grid-column:span 3;}
+    .layout-two-equal .gallery-grid .g5,.layout-two-equal .gallery-grid .g6,.layout-two-equal .gallery-grid .g7{grid-column:span 2;}
+    @media (max-width:700px){.layout-two-equal .gallery-grid{grid-template-columns:1fr;}.layout-two-equal .gallery-grid > div[class]{grid-column:auto;}}
   </style>
 </head>
 <body class="project-detail layout-two-equal">
@@ -55,7 +59,7 @@
   <section class="section">
     <div class="about-wrap">
       <span class="eyebrow">sobre el proyecto</span>
-      <p>Diseño del escudo y de las camisetas para el equipo Parque Chacabuco. El logo parte de un monograma que combina las letras P, C y H en una construcción geométrica de líneas rectas, casi como un laberinto, encerrado en un escudo clásico de fútbol y acompañado por el nombre del club. Elegí una paleta de violeta profundo, lila y blanco, y la trasladé a dos camisetas: una versión roja, de líneas limpias, con vivos y cuello en violeta oscuro, y otra versión con un estampado de pinceladas en lila sobre violeta, que le da más textura y carácter. En ambas ubiqué el escudo sobre el pecho y definí la tipografía del nombre y el número de la espalda, de trazo redondeado y alta legibilidad.</p>
+      <p>Diseño del escudo y de las camisetas para el equipo Parque Chacabuco. El logo parte de un monograma que combina las letras P, C y H en una construcción geométrica de líneas rectas, casi como un laberinto, encerrado en un escudo clásico de fútbol y acompañado por el nombre del club. Elegí una paleta de violeta profundo, lila y blanco, y la trasladé a dos camisetas: una versión roja, de líneas limpias, con vivos y cuello en violeta oscuro, y otra versión con un estampado de pinceladas en lila sobre violeta, que le da más textura y carácter. En ambas ubiqué el escudo sobre el pecho y definí la tipografía del nombre y el número de la espalda, de trazo redondeado y alta legibilidad. Para llevar el diseño a producción preparé además una ficha técnica de tres páginas, con las vistas de frente y espalda, la paleta de color en HEX, RGB y CMYK, la tela y la técnica de sublimación total, las medidas de aplicación del escudo, el apellido y el dorsal, la curva de talles y un checklist para la fábrica.</p>
     </div>
   </section>
 
@@ -74,6 +78,21 @@
       <div class="g4">
         <div class="project-media">
           <img src="./chacabuco_files/camiseta-violeta.webp" alt="Camiseta violeta con estampado de pinceladas de Parque Chacabuco, frente y espalda" width="1400" height="987">
+        </div>
+      </div>
+      <div class="g5">
+        <div class="project-media">
+          <a href="./chacabuco_files/ficha-1-vistas.webp" target="_blank" rel="noopener"><img src="./chacabuco_files/ficha-1-vistas.webp" alt="Ficha técnica de producción, página 1: vistas del diseño" width="1415" height="2000" loading="lazy"></a>
+        </div>
+      </div>
+      <div class="g6">
+        <div class="project-media">
+          <a href="./chacabuco_files/ficha-2-color-materiales.webp" target="_blank" rel="noopener"><img src="./chacabuco_files/ficha-2-color-materiales.webp" alt="Ficha técnica de producción, página 2: colorística y materiales" width="1415" height="2000" loading="lazy"></a>
+        </div>
+      </div>
+      <div class="g7">
+        <div class="project-media">
+          <a href="./chacabuco_files/ficha-3-aplicaciones-talles.webp" target="_blank" rel="noopener"><img src="./chacabuco_files/ficha-3-aplicaciones-talles.webp" alt="Ficha técnica de producción, página 3: aplicaciones y talles" width="1415" height="2000" loading="lazy"></a>
         </div>
       </div>
     </div>
